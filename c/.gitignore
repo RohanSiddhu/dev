@@ -1,0 +1,7 @@
+# Binary Directory and Executables.
+bin/
+*.exe
+*.EXE
+
+# Editors
+*~
