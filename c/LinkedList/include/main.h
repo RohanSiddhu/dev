@@ -9,7 +9,9 @@
 
 #pragma once
 
-#include "Config.h"
+#ifdef USE_CONFIG
+    #include "Config.h"
+#endif
 
 #include <stdio.h>
 #include "list.h"

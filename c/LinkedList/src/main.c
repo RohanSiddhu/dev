@@ -1,7 +1,9 @@
 #include "main.h"
 
 int main() {
+#ifdef USE_CONFIG
     printf("Version %i.%i\n\n", Test_VERSION_MAJOR, Test_VERSION_MINOR);
+#endif
 
     SinglyListi* list = NULL;
 

@@ -6,7 +6,11 @@ set(CMAKE_C_STANDARD 11)
 
 add_subdirectory(list)
 add_executable(test src/main.c)
-configure_file(Config.h.in Config.h)
+
+option(USE_CONFIG "Use cmake provided configuration file." ON)
+if(USE_CONFIG)
+    configure_file(Config.h.in Config.h)
+endif()
 
 target_link_libraries(test PUBLIC list)
 
