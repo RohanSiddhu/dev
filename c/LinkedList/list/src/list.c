@@ -60,3 +60,44 @@ void SinglyDisplayi(SinglyListi* li) {
         }
     }
 }
+
+
+/**
+ * @brief Add value after the give position.
+ */
+
+unsigned char SinglyAddi(SinglyListi* li, int position, int value) {
+    SinglyListi *temp, *p;
+    temp = li;
+
+    for (int i = 0; i < position; i++) {    // Traverse to the given position.
+        temp = temp->next;
+
+        if(temp == NULL) {      // If position is invalid.
+            printf("Invalid position %d\n", position);
+            return 0;
+        }
+    }
+
+    p = (SinglyListi*) malloc(sizeof(SinglyListi));
+    p->data = value;
+    p->next = temp->next;
+    temp->next = p;
+
+    return 1;
+}
+
+
+/**
+ * @brief Count the total number of nodes in the list.
+ */
+
+void SinglyCounti(SinglyListi* li) {
+    int count = 0;
+
+    for (count = 0; li != NULL; count++) {
+        li = li->next;
+    }
+
+    printf("Total Nodes: %d\n", count);
+}

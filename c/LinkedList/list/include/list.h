@@ -16,3 +16,5 @@ typedef struct SinglyListi {
 
 unsigned char SinglyAppendi(SinglyListi** li, int value);     // Add item to the end of the list.
 void SinglyDisplayi(SinglyListi* li);      // Display all the list nodes; print NULL if empty.
+unsigned char SinglyAddi(SinglyListi* li, int position, int value);    // Add the given value after the given position.
+void SinglyCounti(SinglyListi* li);     // Count the total numbet of nodes in the list.
