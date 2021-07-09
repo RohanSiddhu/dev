@@ -8,10 +8,6 @@
  */
 
 int main() {
-#ifdef USE_CONFIG
-    printf("Version %i.%i\n\n", Test_VERSION_MAJOR, Test_VERSION_MINOR);
-#endif
-
     SinglyListi* list = NULL;
 
     clock_t startClock = clock();
@@ -30,6 +26,5 @@ int main() {
 
     printf("\nExecution time: %lf\n", duration);
 
-    getchar();
     return 0;
 }
