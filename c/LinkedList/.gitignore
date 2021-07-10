@@ -1,12 +1,7 @@
-# Binary Directory, Build Directory and executables.
+# Build Dir and executables.
 bin/
-Bin/
-BIN/
 build/
-Build/
-BUILD/
 *.exe
-*.EXE
 
 # Text Editors
 *~
