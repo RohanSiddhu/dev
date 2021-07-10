@@ -2,9 +2,9 @@
  * Description: This program takes solved sudoku as an input and checks whether the solution is correct or not.
  * Coded By: Rohan Siddhu
  * Date: 18/12/2020
- * Date Completed: 31/12/2020
  * Last modified: 31/12/2020
- * */
+ */
+
 
 #include <stdio.h>
 
