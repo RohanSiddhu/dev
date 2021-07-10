@@ -1,7 +1,9 @@
-# My-C-Programs
+# C Dev
 
-What is this?
-This is a collection of casual C programs that I have written and I want to keep them.
+This repository contains casual C programs, libraries and projects developed by me.
 
-Why I want to keep them?
-Because it takes time and efforts to write any program.
+*Note:- The code used in the development may not be the best way of doing things. The code used is just my casual work.*
+
+## Help
+
+More details about the projects are discussed in their respective *'README.md'* file. For more detail about the individual code file take a look at the comments.
