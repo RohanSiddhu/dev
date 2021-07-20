@@ -1,8 +1,0 @@
-# Build Dir and Executables.
-build/
-build*/
-bin/
-*.exe
-
-# Editors
-*~
