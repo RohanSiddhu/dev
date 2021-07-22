@@ -18,3 +18,5 @@ The library implement various type of linked list and functions to operate on th
         Add 'value' after 'position'.
     4. void SinglyCounti(SinglyListi* li);
         Count total number of nodes in 'li'.
+    5. unsigned char SinglyAddAtBegi(SinglyListi* li, int value);
+        Add 'value' at the beginning of the list

@@ -2,7 +2,7 @@
  * Description: 
  * Coded By: Rohan Siddhu
  * Date: 21/06/2021
- * Last Modified: 09/07/2021
+ * Last Modified: 22/07/2021
  */
 
 #include "list.h"
@@ -13,7 +13,9 @@
 
 
 /**
- * SinglyAppendi: Add a node to the end of the list.
+ * @brief Add a node to the end of the list.
+ * 
+ * @return unsigned char
  */
 
 unsigned char SinglyAppendi(SinglyListi** li, int value) {
@@ -71,6 +73,8 @@ void SinglyDisplayi(SinglyListi* li) {
 
 /**
  * @brief Add value after the give position.
+ * 
+ * @return unsigned char
  */
 
 unsigned char SinglyAddi(SinglyListi* li, int position, int value) {
@@ -107,4 +111,26 @@ void SinglyCounti(SinglyListi* li) {
     }
 
     printf("Total Nodes: %d\n", count);
+}
+
+
+/**
+ * @brief Add 'value' at the beginnig of the list.
+ * 
+ * @return unsigned char
+ */
+
+unsigned char SinglyAddAtBegi(SinglyListi* li, int value) {
+    SinglyListi* temp;
+    temp = (SinglyListi*) malloc(sizeof(SinglyListi));
+    if (temp == NULL) {
+        printf("Failed to allocate memory.\n");
+        return 0;
+    }
+
+    temp->data = value;
+    temp->next = li;
+    li = temp;
+
+    return 1;
 }

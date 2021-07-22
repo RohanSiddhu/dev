@@ -13,5 +13,23 @@
 #include "list.h"
 
 #include <stdio.h>
-#include <time.h>
+#include <stdlib.h>
 
+
+/**
+ * Mactos
+ */
+
+#define PROMPT() printf("\n>>> ")
+#define INPUT(X) scanf("%c", &(X))
+
+
+/**
+ * Prototype Declaration.
+ */
+
+void clear_screen();
+void pause();
+void main_menu();
+void singly_list_option();
+void doubly_list_option();
