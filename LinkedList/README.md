@@ -22,3 +22,11 @@ The library implement various type of linked list and functions to operate on th
         Count total number of nodes in 'li'.
     5. unsigned char SinglyAddAtBegi(SinglyListi* li, int value);
         Add 'value' at the beginning of the list
+
+## Platform Tested
+
+1. OS - Windows 10 64-bit\
+Compiler - Visual C++
+
+2. OS - Linux (Debian) 64-bit\
+Compiler - GCC
