@@ -9,7 +9,9 @@ The library implement various type of linked list and functions to operate on th
 
 ### 1. Singly Linked List
 *Datatype -* SinglyListi
+
 *Operations:*
+
     1. unsigned char SinglyAppendi(SinglyListi** li, int value);
         Add 'value' to the end of the list.
     2. void SinglyDisplayi(SinglyListi* li);
