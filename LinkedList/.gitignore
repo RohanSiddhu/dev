@@ -1,7 +1,13 @@
 # Build Dir and executables.
 bin/
 build/
+out/
 *.exe
+
+
+# Visual Studio
+.vs/
+
 
 # Text Editors
 *~
