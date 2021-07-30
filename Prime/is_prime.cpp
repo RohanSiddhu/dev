@@ -3,7 +3,7 @@
 bool is_prime(uint64_t num) {
     uint64_t limit = num;
 
-    if (num == 1)
+    if (num <= 1)
     {
         return false;
     }
@@ -26,4 +26,6 @@ bool is_prime(uint64_t num) {
             limit = num / i;
         }
     }
+    
+    return false;
 }
