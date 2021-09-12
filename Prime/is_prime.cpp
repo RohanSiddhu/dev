@@ -14,7 +14,7 @@ bool is_prime(uint64_t num) {
         {
             mod = num % i;
 
-            if (i >= limit || num == 2)
+            if (i >= limit)
             {
                 return true;
             }
