@@ -1,2 +1,2 @@
-#define Test_VERSION_MAJOR @Test_VERSION_MAJOR@
-#define Test_VERSION_MINOR @Test_VERSION_MINOR@
+#define LinkedList_VERSION_MAJOR @LinkedList_VERSION_MAJOR@
+#define LinkedList_VERSION_MINOR @LinkedList_VERSION_MINOR@

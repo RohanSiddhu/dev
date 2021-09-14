@@ -1,8 +1,8 @@
 # Build Dir and executables.
-bin/
-build/
-out/
-*.exe
+[Bb][Ii][Nn]/
+[Bb][Uu][Ii][Ll][Dd]/
+[Oo][Uu][Tt]/
+*.[Ee][Xx][Ee]
 
 
 # Visual Studio

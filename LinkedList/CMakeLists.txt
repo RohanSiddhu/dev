@@ -1,16 +1,14 @@
-cmake_minimum_required(VERSION 3.8)
+cmake_minimum_required(VERSION 3.10)
 
-project(Test VERSION 1.0)
+project(LinkedList VERSION 1.0)
 
+set(CMAKE_CXX_STANDARD 14)
 set(CMAKE_C_STANDARD 11)
 
-add_subdirectory(list)
-add_executable(test src/main.c)
+add_library(list src/list.cxx)
 
 configure_file(Config.h.in Config.h)
 
-target_link_libraries(test PUBLIC list)
-
-target_include_directories(test PUBLIC "${PROJECT_BINARY_DIR}"
-                            "${PROJECT_SOURCE_DIR}/include"
-                            "${PROJECT_SOURCE_DIR}/list/include")
+target_include_directories(list PUBLIC
+    "${PROJECT_BINARY_DIR}"
+    "${PROJECT_SOURCE_DIR}/include")
