@@ -1,0 +1,9 @@
+[Bb][Uu][Ii][Ll][Dd]/
+[Oo][Uu][Tt]/
+.vs/
+
+*.[Ee][Xx][Ee]
+
+# Text editor
+*~
+.vscode/
