@@ -6,10 +6,9 @@ the kernel ring buffer on loading and removing the module.
 ### Tools
 1. GNU Make
 ### Dependencies
-1. Linux Headers
-2. Kernel Development Package
+1. Kernel Development Package
 ### Build Command
-In project directory run: ```make```
+In project's root directory, run: ```make```
 ### Loading/Removing Module
 List Modules: ```lsmod```
 
@@ -19,5 +18,5 @@ Remove: ```sudo rmmod simple```
 
 Print kernel ring buffer: ```dmesg```
 
-## Reference
+## References
 *Operating System Concepts 9th edition, Wiley -> Chapter 2 -> Programming Project 1 -> Assignment 1.*
