@@ -4,9 +4,10 @@
 #include <linux/list.h>
 #include <linux/types.h>
 #include <linux/slab.h>
+#include <linux/string.h>
 
 struct birthday {
-    char name[33];
+    char* name;
     int day;
     int month;
     int year;
@@ -18,13 +19,12 @@ LIST_HEAD(birthday_list);
 /* This function append birthday node to the given list. */
 void append_birthday(struct list_head *list, const char* name, int day, int month, int year) {
     struct birthday *person;
-    int i;
+    
 
     person = kmalloc(sizeof(*person), GFP_KERNEL);
-    for (i = 0; name[i] != 0; i++) {
-        person->name[i] = name[i];
-    }
-    person->name[i] = 0;
+    // person->name must be explicitly deleted when deleting the node to prevent memory leak.
+    person->name = (char*)kmalloc(strlen(name) + 1, GFP_KERNEL);
+    strcpy(person->name, name);
     person->day = day;
     person->month = month;
     person->year = year;
@@ -43,6 +43,7 @@ int birthday_init(void) {
     append_birthday(&birthday_list, "Eshant Siddhu", 25, 12, 2000);
     append_birthday(&birthday_list, "Anshuman Siddhu", 29, 8, 2010);
     append_birthday(&birthday_list, "Tarun Siddhu", 16, 8, 1974);
+    append_birthday(&birthday_list, "Shailendra Siddhu", 6, 3, 1972);
 
     // Traversing birthday_list.
     struct birthday *ptr;
@@ -64,6 +65,7 @@ void birthday_exit(void) {
 
     list_for_each_entry_safe(ptr, next, &birthday_list, list) {
         list_del(&ptr->list);
+        kfree(ptr->name);
         kfree(ptr);
     }
 }
