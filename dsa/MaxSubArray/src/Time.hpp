@@ -12,27 +12,29 @@
 class Time {
 private:
     clockid_t clockid;
-    timespec start, end, duration;
+    timespec startTime, endTime, duration;
 public:
-    Time(clockid_t clockid = CLOCK_PROCESS_CPUTIME_ID) {
+    void start(clockid_t clockid = CLOCK_PROCESS_CPUTIME_ID) {
         this->clockid = clockid;
-        clock_gettime(clockid, &start);
+        clock_gettime(clockid, &startTime);
     }
 
-    ~Time() {
-        clock_gettime(clockid, &end);
+    void end() {
+        clock_gettime(clockid, &endTime);
 
-        if (end.tv_nsec < start.tv_nsec) {
-            duration.tv_sec = end.tv_sec - start.tv_sec - 1;
-            duration.tv_nsec = (long)1e9 + end.tv_nsec -start.tv_nsec;
+        if (endTime.tv_nsec < startTime.tv_nsec) {
+            duration.tv_sec = endTime.tv_sec - startTime.tv_sec - 1;
+            duration.tv_nsec = (long)1e9 + endTime.tv_nsec -startTime.tv_nsec;
         }
         else {
-            duration.tv_sec = end.tv_sec - start.tv_sec;
-            duration.tv_nsec = end.tv_nsec - start.tv_nsec;
+            duration.tv_sec = endTime.tv_sec - startTime.tv_sec;
+            duration.tv_nsec = endTime.tv_nsec - startTime.tv_nsec;
         }
 
-        std::cout << duration.tv_sec << "." << std::setw(9) << std::setfill('0') << duration.tv_nsec << "s" << std::endl;
+        // std::cout << duration.tv_sec << "." << std::setw(9) << std::setfill('0') << duration.tv_nsec << "s" << std::endl;
     }
+
+    timespec getTime() { return duration; }
 };
 #elif defined _WIN64
 
